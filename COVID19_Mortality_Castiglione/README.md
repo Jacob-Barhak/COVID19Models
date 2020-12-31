@@ -6,8 +6,8 @@ Filippo Castiglione, Debashrito Deb, Anurag P. Srivastava, Pietro Liò, Arcangel
 bioRxiv 2020.12.20.423670; doi: [10.1101/2020.12.20.423670](https://doi.org/10.1101/2020.12.20.423670)
 
 Additional discussions regarding the mortality model are available in theFollowing mailing lists:
-[Integration subgroup of the multiscale modeling and viral pandemics working group](https://lists.simtk.org/pipermail/vp-integration-subgroup/2020-December/subject.html)
-[Comorbidities subgroup of the multiscale modeling and viral pandemics working group](https://lists.simtk.org/pipermail/vpcomorbidities-subgroup/2020-December/subject.html)
+* [Integration subgroup of the multiscale modeling and viral pandemics working group](https://lists.simtk.org/pipermail/vp-integration-subgroup/2020-December/subject.html)
+* [Comorbidities subgroup of the multiscale modeling and viral pandemics working group](https://lists.simtk.org/pipermail/vpcomorbidities-subgroup/2020-December/subject.html)
 
 The code is contains the function mortality_prob that can be imported to a python program. 
 If executed as a program will generate an interactive plot.
