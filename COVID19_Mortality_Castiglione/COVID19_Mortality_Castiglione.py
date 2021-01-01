@@ -49,7 +49,7 @@ from math import exp
 
 def mortality_prob(age, time):
     """ Calculate probability of COVID-19 mortality as a function of age 
-        and time from infection
+        and time from infection in days - this is the density function
     """
     # We construct a table of parameters per age decade: as extracted from
     # the instructions in the emails. Each line in the matrix corresponds to
@@ -74,7 +74,12 @@ def mortality_prob(age, time):
     # the x in the equation is time in 8 hour periods = 1/3 day.
     # so the conversion to x is:
     x = time * 3.0
-    prob = multiplier/100 * (a*b*exp(-b*(-c + x))/(100*(1 + exp(-b*(-c + x)))**2))
+    # since this is a density function and we divided  time by 3 we need to 
+    # compensate and multiply the intensity by 3 - this is beyond the 
+    # previous instructions that multiply by a multiplier and divide by 100
+    prob = 3 * multiplier / 100 * (a*b*exp(-b*(-c + x))/(100*(1 + exp(-b*(-c + x)))**2))
+    # for simplicity note that this result assuming rectangular integration over 1 day
+    # should reflect the probability of mortality in a specific day.
     return prob
 
 
