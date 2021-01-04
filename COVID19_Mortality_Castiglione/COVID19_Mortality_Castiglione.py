@@ -1,22 +1,11 @@
 # COVID-19 mortality model by Filippo Castiglione et. al. 
-# This work is available under MIT license
-# Copyright 2020 Filippo Castiglione
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights 
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
-# copies of the Software, and to permit persons to whom the Software is 
-# furnished to do so, subject to the following conditions:
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
-# THE SOFTWARE.
-
+# CC0 license: see http://creativecommons.org/publicdomain/zero/1.0/
+#
+# To the extent possible under law, Jacob Barhak has waived all copyright and 
+# related or neighboring rights to COVID-19 mortality model by Filippo Castiglione et. al. 
+# This work is published from: United States.
+# 
+#
 # This program calculates the probability of Mortality according to the paper:
 # Filippo Castiglione, Debashrito Deb, Anurag P. Srivastava, Pietro Liò, Arcangelo Liso
 # bioRxiv 2020.12.20.423670; doi: https://doi.org/10.1101/2020.12.20.423670
@@ -32,6 +21,9 @@
 # https://lists.simtk.org/pipermail/vpcomorbidities-subgroup/2020-December/000007.html
 # Initial permission to replicate the code was released in:
 # https://lists.simtk.org/pipermail/vpcomorbidities-subgroup/2020-December/000002.html
+# Permission to release under CC0 was given publicly by Filippo Castiglione in these links:
+# https://lists.simtk.org/pipermail/vpcomorbidities-subgroup/2021-January/000010.html
+# https://lists.simtk.org/pipermail/vp-integration-subgroup/2021-January/000010.html
 
 
 # Here is the differentiation of the original function using sympy
@@ -94,7 +86,7 @@ def create_plots():
     hv.extension('bokeh')
     pn.extension(safe_embed=True)
     ages = [i for i in range(0, 100, 10)]
-    times = [i for i in range(50)]
+    times = [i for i in range(60)]
     plot_dict = {}
     x_label = 'Time since infection in days'
     y_label = 'Mortality probability'

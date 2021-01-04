@@ -9,6 +9,8 @@ Additional discussions regarding the mortality model are available in theFollowi
 * [Integration subgroup of the multiscale modeling and viral pandemics working group](https://lists.simtk.org/pipermail/vp-integration-subgroup/2020-December/subject.html)
 * [Comorbidities subgroup of the multiscale modeling and viral pandemics working group](https://lists.simtk.org/pipermail/vpcomorbidities-subgroup/2020-December/subject.html)
 
+
+
 The code is contains the function mortality_prob that can be imported to a python program. 
 If executed as a program will generate an interactive plot.
 
@@ -66,12 +68,13 @@ Special thanks to:
 
 LICENSE
 -------
-This work is available under MIT license
+<a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"> <img src="https://licensebuttons.net/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />  </a>
 
-Copyright 2020 Filippo Castiglione
+To the extent possible under law, Jacob Barhak has waived all copyright and 
+related or neighboring rights to COVID-19 mortality model by Filippo Castiglione et. al. 
+This work is published from: United States.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Permission to release under CC0 was given publicly by Filippo Castiglione in these links:
+[1](https://lists.simtk.org/pipermail/vpcomorbidities-subgroup/2021-January/000010.html)
+[2](https://lists.simtk.org/pipermail/vp-integration-subgroup/2021-January/000010.html)
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
