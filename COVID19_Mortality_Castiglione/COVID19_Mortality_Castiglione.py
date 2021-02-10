@@ -7,7 +7,7 @@
 # 
 #
 # This program calculates the probability of Mortality according to the paper:
-# Filippo Castiglione, Debashrito Deb, Anurag P. Srivastava, Pietro Liò, Arcangelo Liso
+# Filippo Castiglione, Debashrito Deb, Anurag P. Srivastava, Pietro Lio, Arcangelo Liso
 # bioRxiv 2020.12.20.423670; doi: https://doi.org/10.1101/2020.12.20.423670
 # supplemented with communications in the comodbidities and integration 
 # subgroups mailing lists of the multi scale modeling and viral pandemic 
@@ -93,9 +93,11 @@ def create_plots():
     for age in ages:
         probabilities = [mortality_prob(age, time) for time in times]
         data = {x_label: times, y_label: probabilities}        
-        single_plot = hv.Points(data, kdims=[x_label, y_label])
-        plot_dict[age] = single_plot     
-    hmap = hv.HoloMap(plot_dict, kdims=['age']).opts(height=600, width=800, tools=['hover'], 
+        marker_plot = hv.Scatter(data, kdims=[x_label], vdims=[y_label]).opts(marker= 'o', size = 7, color='green', tools=['hover'])
+        curve_plot = hv.Curve(data, kdims=[x_label], vdims=[y_label]).opts(color='red')
+        single_plot = marker_plot * curve_plot
+        plot_dict[age] = single_plot
+    hmap = hv.HoloMap(plot_dict, kdims=['age']).opts(height=600, width=800, 
                      title = 'Daily Probability of COVID-19 Mortality by Age and Time Since Infection')
     panel_object = pn.pane.HoloViews(hmap)
     panel_object.save('COVID19_Mortality_Castiglione', embed=True, resources=INLINE)     
