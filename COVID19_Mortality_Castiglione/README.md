@@ -63,7 +63,7 @@ Special thanks to:
 * Anurag P. Srivastava
 * Pietro Liò
 * Arcangelo Liso
-* The [multiscale modeling and viral pandemics working group](https://www.imagwiki.nibib.nih.gov/working-groups/multiscale-modeling-and-viral-pandemics
+* The [multiscale modeling and viral pandemics working group](https://www.imagwiki.nibib.nih.gov/working-groups/multiscale-modeling-and-viral-pandemics)
 
 
 LICENSE

@@ -85,7 +85,7 @@ Special thanks to:
 * Robin Thompson
 * William Hart
 * Sen Pei
-* The [multiscale modeling and viral pandemics working group](https://www.imagwiki.nibib.nih.gov/working-groups/multiscale-modeling-and-viral-pandemics
+* The [multiscale modeling and viral pandemics working group](https://www.imagwiki.nibib.nih.gov/working-groups/multiscale-modeling-and-viral-pandemics)
 
 
 LICENSE
