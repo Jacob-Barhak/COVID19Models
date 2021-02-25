@@ -9,7 +9,7 @@ Each directory will contain different models and possibly different licenses
 Models / Directories:
 ---------------------
 * COVID19_Mortality_Castiglione - COVID-19 Mortality model by Castiglione et. al.
-
+* COVID19_Infectiousness_Multi - COVID-19 Infectiousness extracted from multiple sources
 
 DEVELOPER CONTACT INFO:
 -----------------------
