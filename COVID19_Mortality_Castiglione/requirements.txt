@@ -1,0 +1,4 @@
+python == 3.7.9
+panel == 0.9.5
+holoviews == 1.13.4
+bokeh == 2.0.2
