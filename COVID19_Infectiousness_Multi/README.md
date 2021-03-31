@@ -63,7 +63,8 @@ FILES:
 ------
 * COVID19_Infectiousness_Multi.py : Code that generates the function.
 * COVID19_Infectiousness_Multi.html : The output plot interactively showing the function
-
+* requirements.txt : specifying requirements of dependent python packages the code was tested with 
+* README.MD : the file you are reading now
 
 DEVELOPER CONTACT INFO:
 -----------------------
