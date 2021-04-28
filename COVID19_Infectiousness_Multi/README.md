@@ -89,6 +89,7 @@ Special thanks to:
 * Robin Thompson
 * William Hart
 * Sen Pei
+* Lucas Bottcher
 * The [multiscale modeling and viral pandemics working group](https://www.imagwiki.nibib.nih.gov/working-groups/multiscale-modeling-and-viral-pandemics)
 
 
@@ -100,5 +101,6 @@ To the extent possible under law, Jacob Barhak has waived all copyright and
 related or neighboring rights to COVID-19 Infectiousness Models from Multiple Sources
 This work is published from: United States.
 
-Permission to release was given by Robin Thompson on 10-Feb-2021, Alan S. Perelson on 22-Feb-2021, Sen Pei on 22-Feb-2021. 
+Permission to release was given by Robin Thompson on 10-Feb-2021, Alan S. Perelson on 22-Feb-2021, Sen Pei on 22-Feb-2021, Lucas Bottcher on  16-Mar-2021. 
+
 
