@@ -40,6 +40,13 @@
 #   the importance of contact tracing. medRxiv 2020.11.20.20235754; https://doi.org/10.1101/2020.11.20.20235754
 # The numbers were digitized manually and processed by scaling the max y to 1 and averaging over 2 points and 
 # rounding both x and y  to the closest 1 digits and remove the fractions
+### Model 5
+# Based on equation 7 from:
+# * Lucas Bottcher, Mingtao Xia, Tom Chou. Why case fatality ratios can be misleading: individual- and population-based
+#   mortality estimates and factors influencing them. Physical Biology, Volume 17, Number 6. https://doi.org/10.1088/1478-3975/ab9e59
+# The numbers were generated using a=8,  b=1.25 , x= np.array(range(19)), b*gamma.pdf(b*x, a) / max(b*gamma.pdf(b*x, a))
+# additional information and confirmation available in this online discussion: 
+# https://lists.simtk.org/pipermail/vp-integration-subgroup/2021-March/000044.html
 
 
 def infectiosness_per_day(model_number, days_since_infection):
@@ -51,6 +58,11 @@ def infectiosness_per_day(model_number, days_since_infection):
         [0,0.3,0.9,  1,  1,  1,  1,  1,  1,  1,  1,  1,0.9,0.9,0.8,0.6,0.4,0.2,  0],
         [0,0.1,0.8,  1,  1,0.9,0.7,0.2,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
         [0,0.1,0.4,0.8,  1,  1,0.8,0.6,0.5,0.3,0.2,0.2,0.1,0.1,  0,  0,  0,  0,  0],
+        [0.00000000e+00, 1.85046877e-03, 6.78615268e-02, 3.32195953e-01,
+         7.13012907e-01, 9.74090662e-01, 1.00000000e+00, 8.42867727e-01,
+         6.14943126e-01, 4.01822736e-01, 2.40695980e-01, 1.34384609e-01,
+         7.07947994e-02, 3.55195943e-02, 1.70959279e-02, 7.93902445e-03,
+         3.57355197e-03, 1.56507290e-03, 6.69008375e-04]
     ]
     relative_infectiousness = infectiousness_per_day[model_number][days_since_infection]
     return relative_infectiousness
@@ -70,7 +82,8 @@ def create_plots():
         'Model 1: Table 1 Li et. al. DOI: 10.1126/science.abb3221',
         'Model 2: Figure 3G Ke et. al. DOI: 10.1101/2020.09.25.20201772',
         'Model 3: Figure 3C Ke et. al. DOI: 10.1101/2020.09.25.20201772',
-        'Model 4: Figure 2a blue Hart et. al. 10.1101/2020.11.20.20235754'
+        'Model 4: Figure 2a blue Hart et. al. 10.1101/2020.11.20.20235754',
+        'Model 5: Eq 7 Bottcher et. al. 10.1088/1478-3975/ab9e59'
     ]
     times = [i for i in range(19)]
     plot_dict = {}

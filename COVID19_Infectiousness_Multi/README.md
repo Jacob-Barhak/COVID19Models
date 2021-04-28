@@ -30,17 +30,20 @@ The numbers were digitized manually and processed by scaling the max y to 1 and 
 Based on hand digitized Figure 2a - blue curve from:
 * W.S. Hart, P.K. Maini, R.N. Thompson , High infectiousness immediately before COVID-19 symptom onset highlights the importance of contact tracing. medRxiv 2020.11.20.20235754; [DOI: 10.1101/2020.11.20.20235754](https://doi.org/10.1101/2020.11.20.20235754)
 
-The numbers were digitized manually and processed by scaling the max y to 1 and averaging over 2 points and rounding both x and y  to the closest 1 digits and remove the fractions
+### Model 5
+Based on equation 7 from:
+* Lucas Bottcher, Mingtao Xia, Tom Chou. Why case fatality ratios can be misleading: individual- and population-based mortality estimates and factors influencing them. Physical Biology, Volume 17, Number 6. [DOI: 10.1088/1478-3975/ab9e59](https://doi.org/10.1088/1478-3975/ab9e59)
 
 
 
 ### Additional Details
 
 Additional discussions regarding the infectiousness model are available in the following mailing lists:
-* [Integration subgroup of the multiscale modeling and viral pandemics working group](https://lists.simtk.org/pipermail/vp-integration-subgroup/2021-January/000012.html)
+* Integration subgroup of the multiscale modeling and viral pandemics working group - [Another example of integration and reproduction of a model](https://lists.simtk.org/pipermail/vp-integration-subgroup/2021-January/000012.html)
+* Integration subgroup of the multiscale modeling and viral pandemics working group - [Another case study of model integration](https://lists.simtk.org/pipermail/vp-integration-subgroup/2021-March/000044.html)
 
 
-The code is contains the infectiousness profiles that can be imported to a python program. 
+The code contains the infectiousness profiles that can be imported to a python program. 
 If executed as a program will generate an interactive plot of all profiles.
 
 
