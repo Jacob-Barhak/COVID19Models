@@ -34,7 +34,8 @@ FILES:
 ------
 * COVID19_Mortality_Castiglione.py : Code that generates the function.
 * COVID19_Mortality_Castiglione.html : The output plot interactively showing the function
-* requirements.txt : specifying requirements of dependent packages the code was tested with 
+* COVID19_Mortality_Castiglione_Grid.html : The output plot showing the function in grid format
+* requirements.txt : specifying requirements of dependent python packages the code was tested with 
 * README.MD : the file you are reading now
 
 

@@ -66,6 +66,7 @@ FILES:
 ------
 * COVID19_Infectiousness_Multi.py : Code that generates the function.
 * COVID19_Infectiousness_Multi.html : The output plot interactively showing the function
+* COVID19_Infectiousness_Grid.html : The output plots in grid format
 * requirements.txt : specifying requirements of dependent python packages the code was tested with 
 * README.MD : the file you are reading now
 

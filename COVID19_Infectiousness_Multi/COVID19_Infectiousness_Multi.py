@@ -48,6 +48,7 @@
 # additional information and confirmation available in this online discussion: 
 # https://lists.simtk.org/pipermail/vp-integration-subgroup/2021-March/000044.html
 
+import sys
 
 def infectiosness_per_day(model_number, days_since_infection):
     """ Calculates the infectiousness per model for day since infection """
@@ -89,13 +90,19 @@ def create_plots():
     plot_dict = {}
     x_label = 'Time since infection in days'
     y_label = 'Relative Infectiousness'
+    plot_list = []
     for (model_enum, model) in enumerate(models):
         infectiousness = [infectiosness_per_day(model_enum, time) for time in times]
         data = {x_label: times, y_label: infectiousness}        
-        single_plot = hv.Bars(data, kdims=[x_label], vdims=[y_label]).opts(title = 'Relative Infectiousness of COVID-19 Per Day Since Infection', color = 'blue', tools=['hover'])           
+        single_plot = hv.Bars(data, kdims=[x_label], vdims=[y_label]).opts(height=200, width=600,
+            title = 'Infectiousness ' + model, color = 'blue', tools=['hover'])           
+        plot_list.append(single_plot)
         plot_dict[model] = single_plot
+    plot_list_obj = hv.Layout(plot_list).cols(1)
+    panel_object = pn.pane.HoloViews(plot_list_obj)
+    panel_object.save('COVID19_Infectiousness_Grid', embed=True, resources=INLINE)     
     hmap = hv.HoloMap(plot_dict, kdims=['model']).opts(height=600, width=800, 
-                     title = 'Relative Infectiousness of COVID-19 Per Day Since Infection')
+                     title = 'Relative Infectiousness of COVID-19 Per Day Since Infection').opts(xrotation=90)
     panel_object = pn.pane.HoloViews(hmap)
     panel_object.save('COVID19_Infectiousness_Multi', embed=True, resources=INLINE)     
 

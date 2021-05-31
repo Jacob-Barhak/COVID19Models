@@ -85,18 +85,25 @@ def create_plots():
     from bokeh.resources import INLINE
     hv.extension('bokeh')
     pn.extension(safe_embed=True)
-    ages = [i for i in range(0, 100, 10)]
+    age_delta = 10
+    ages = [i for i in range(0, 100, age_delta)]
     times = [i for i in range(60)]
     plot_dict = {}
     x_label = 'Time since infection in days'
     y_label = 'Mortality probability'
+    plot_list = []
     for age in ages:
         probabilities = [mortality_prob(age, time) for time in times]
         data = {x_label: times, y_label: probabilities}        
-        marker_plot = hv.Scatter(data, kdims=[x_label], vdims=[y_label]).opts(marker= 'o', size = 7, color='green', tools=['hover'])
+        marker_plot = hv.Scatter(data, kdims=[x_label], vdims=[y_label]).opts(title = 'Mortality for ages ' + str(age) + '-' + str(age + age_delta), height=200, width=600,
+            marker= 'o', size = 7, color='green', tools=['hover'])
         curve_plot = hv.Curve(data, kdims=[x_label], vdims=[y_label]).opts(color='red')
         single_plot = marker_plot * curve_plot
+        plot_list.append(single_plot)
         plot_dict[age] = single_plot
+    plot_list_obj = hv.Layout(plot_list).cols(1)
+    panel_object = pn.pane.HoloViews(plot_list_obj)
+    panel_object.save('COVID19_Mortality_Castiglione_Grid', embed=True, resources=INLINE)     
     hmap = hv.HoloMap(plot_dict, kdims=['age']).opts(height=600, width=800, 
                      title = 'Daily Probability of COVID-19 Mortality by Age and Time Since Infection')
     panel_object = pn.pane.HoloViews(hmap)
