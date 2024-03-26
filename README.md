@@ -10,6 +10,7 @@ Models / Directories:
 ---------------------
 * COVID19_Mortality_Castiglione - COVID-19 Mortality model by Castiglione et. al.
 * COVID19_Infectiousness_Multi - COVID-19 Infectiousness extracted from multiple sources
+* COVID19_Hospitalization_Oshinubi - COVID-19 hospitalization by Kayode Isaac Oshinubi
 
 DEVELOPER CONTACT INFO:
 -----------------------
